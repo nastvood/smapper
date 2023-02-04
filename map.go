@@ -4,6 +4,7 @@ import (
 	"unsafe"
 )
 
+// MapBySlice map by slice.
 func MapBySlice[T any, I comparable](s []T, offset uintptr) map[I]T {
 	if len(s) == 0 {
 		return nil
@@ -29,6 +30,7 @@ func MapBySlice[T any, I comparable](s []T, offset uintptr) map[I]T {
 	return m
 }
 
+// MapBySliceP map by slice of pointers.
 func MapBySliceP[T any, I comparable](s []*T, offset uintptr) map[I]*T {
 	if len(s) == 0 {
 		return nil
@@ -51,6 +53,7 @@ func MapBySliceP[T any, I comparable](s []*T, offset uintptr) map[I]*T {
 	return m
 }
 
+// SetBySlice set by slice.
 func SetBySlice[T any, I comparable](s []T, offset uintptr) map[I]struct{} {
 	if len(s) == 0 {
 		return nil
@@ -76,6 +79,7 @@ func SetBySlice[T any, I comparable](s []T, offset uintptr) map[I]struct{} {
 	return m
 }
 
+// SetBySliceP set by slice of pointers.
 func SetBySliceP[T any, I comparable](s []*T, offset uintptr) map[I]struct{} {
 	if len(s) == 0 {
 		return nil

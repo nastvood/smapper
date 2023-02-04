@@ -10,3 +10,6 @@ lint:
 test:
 	go clean -testcache
 	go test ./... -race
+
+example:
+	go run examples/main.go	
